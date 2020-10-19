@@ -39,6 +39,8 @@ public class Livro {
 	@Temporal(TemporalType.DATE)
 	private Calendar dataPublicacao;
 
+	private String capaLivroPath;
+
 	@ManyToMany
 	@Size(min = 1)
 	@NotNull
@@ -98,6 +100,14 @@ public class Livro {
 
 	public void setDataPublicacao(Calendar dataPublicacao) {
 		this.dataPublicacao = dataPublicacao;
+	}
+
+	public String getCapaLivroPath() {
+		return capaLivroPath;
+	}
+
+	public void setCapaLivroPath(String capaLivroPath) {
+		this.capaLivroPath = capaLivroPath;
 	}
 
 	@Override

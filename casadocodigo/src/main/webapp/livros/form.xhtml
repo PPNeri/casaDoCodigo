@@ -7,7 +7,7 @@
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 
-<h:form>
+<h:form enctype="multipart/form-data">
 	<div>
 		<h:outputLabel value="Título" />
 		<h:inputText required="true" id="titulo"
@@ -50,6 +50,11 @@
 		<h:outputLabel value="Data de Publicação" />
 		<h:inputText id="dataPublic"
 			value="#{adminLivrosBean.livro.dataPublicacao}" />
+	</div>
+	<div>
+		<h:outputLabel value="Capa do Livro" />
+		<h:inputFile id="capaLivro" value="#{adminLivrosBean.capaLivro}" />
+		<h:message for="capaLivro"></h:message>
 	</div>
 	<h:message for="dataPublic" />
 

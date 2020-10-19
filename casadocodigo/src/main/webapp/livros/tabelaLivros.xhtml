@@ -31,6 +31,12 @@
 		#{autor.nome} ,	
 	</ui:repeat>
 	</h:column>
+	<h:column>
+		<f:facet name="header">Capa</f:facet>
+		<!-- 		<a href="#{request.contextPath}/file/#{livro.capaLivroPath}">#{livro.capaLivroPath}</a> -->
+		<img height="5%" alt="#{livro.titulo}"
+			src="#{request.contextPath}/file/#{livro.capaLivroPath}" />
+	</h:column>
 </h:dataTable>
 
 </html>
